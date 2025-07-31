@@ -1,0 +1,195 @@
+/* static/styles.css */
+
+/* Base Styles */
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --dark: #1a1a2e;
+  --light: #f8f9fa;
+  --success: #2ecc71;
+  --warning: #f39c12;
+  --danger: #e74c3c;
+  --gray: #95a5a6;
+}
+
+/* Main Container */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.stApp {
+  background-color: #f5f7fa;
+  background-image: radial-gradient(circle at 10% 20%, rgba(52, 152, 219, 0.1) 0%, rgba(231, 76, 60, 0.05) 90%);
+}
+
+/* Header Styles */
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stMarkdown h1 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 0.5rem;
+}
+
+/* Sidebar Styles */
+.stSidebar {
+  background-color: var(--primary);
+  color: white;
+  padding: 1.5rem;
+}
+
+.stSidebar .stMarkdown h1 {
+  color: white;
+  border-bottom-color: var(--secondary);
+}
+
+.stSidebar input {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Button Styles */
+.stButton>button {
+  background-color: var(--secondary);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stButton>button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.stButton>button:active {
+  transform: translateY(0);
+}
+
+/* Critical Action Button */
+.danger-button button {
+  background-color: var(--danger);
+}
+
+.danger-button button:hover {
+  background-color: #c0392b;
+}
+
+/* Form Elements */
+.stTextInput>div>div>input,
+.stSelectbox>div>div>select,
+.stTextArea>div>div>textarea {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.stTextInput>div>div>input:focus,
+.stSelectbox>div>div>select:focus,
+.stTextArea>div>div>textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Vulnerability Severity Indicators */
+.vuln-critical {
+  color: var(--danger);
+  font-weight: bold;
+}
+
+.vuln-high {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.vuln-medium {
+  color: var(--warning);
+}
+
+.vuln-low {
+  color: var(--gray);
+}
+
+/* Table Styles */
+.stDataFrame {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Cards */
+.status-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--secondary);
+}
+
+/* Loading Spinner */
+.stSpinner>div>div {
+  border-color: var(--secondary) transparent transparent transparent;
+}
+
+/* Responsive Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Report Sections */
+.report-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-section h2 {
+  color: var(--primary);
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
